@@ -31,7 +31,7 @@ def write_filenames_to_file_recursively(path):
     #     else:
     #          lst.append(entry)
 
-    write_list_to_file('filenamesrecursiv.csv', lst)
+    write_list_to_file('filenames.csv', lst)
 
 # third takes a list of filenames and print the first line of each
 
