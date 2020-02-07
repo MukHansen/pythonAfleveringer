@@ -1,0 +1,10 @@
+.history
+.vscode
+exercise1.py
+filenames.csv
+myNewPyFile.py
+teams.csv
+utils.py
+writeToMe.csv
+writeToMe.py
+__pycache__
