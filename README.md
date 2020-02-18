@@ -8,3 +8,6 @@ Afleverings opgaverne udgør den nederste del af følgende side
   
  #  [Uge3](https://github.com/MukHansen/pythonAfleveringer/tree/master/Uge3/mypackage)
   Ikke færdig med alle opgaver
+  
+ #  [Uge4](https://github.com/MukHansen/pythonAfleveringer/blob/master/Uge4)
+  [Exercises](https://github.com/MukHansen/pythonAfleveringer/blob/master/Uge4/exercises.py)
