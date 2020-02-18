@@ -10,4 +10,5 @@ Afleverings opgaverne udgør den nederste del af følgende side
   Ikke færdig med alle opgaver
   
  #  [Uge4](https://github.com/MukHansen/pythonAfleveringer/blob/master/Uge4)
+ Færdig minus ekstra
   [Exercises](https://github.com/MukHansen/pythonAfleveringer/blob/master/Uge4/exercises.py)
