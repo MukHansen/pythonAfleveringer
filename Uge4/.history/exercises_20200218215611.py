@@ -13,7 +13,7 @@ years = {1992: 0, 1993: 0, 1994: 0, 1995: 0, 1996: 0, 1997: 0, 1998: 0, 1999: 0,
        2014: 0, 2015: 0}
 east = {}
 west = {}
-specificHoods = {2: 'Østerbro', 4: 'Vesterbro/Kgs.'}
+specificHoods = {2: 'Østerbro', 4: 'Vesterbro/Kgs.'} #, 4: 'Vesterbro/Kgs.'
 nordicCountryCodes = {5104: 'Finland', 5106: 'Island', 5110: 'Norge', 5120: 'Sverige'}
 
 def getPopPerHood(hood):
@@ -22,6 +22,8 @@ def getPopPerHood(hood):
 
 def getPopPerSpecificHood(year, hood):
     deezMask = (data[:,0] == year) & (data[:,1] == hood)
+    # print((data[deezMask][:,(0,4)]))
+    # return (data[deezMask][:,(0,4)])
     return np.sum(data[deezMask][:,4])
 
 def getOldPeople():
@@ -35,12 +37,14 @@ def getOldNordicPeople(countrycode):
 def getSumOfOldNordicPeople():
     lst = {}
     for key, value in nordicCountryCodes.items():
+        # print(value, getOldNordicPeople(key))
         lst.update({value: getOldNordicPeople(key)})
     return lst    
 
 def getSumPerHood():
     lst = {}
     for key, value in neighb.items():
+        # print(value, getPopPerHood(key))
         lst.update({value: getPopPerHood(key)})
     return lst
 

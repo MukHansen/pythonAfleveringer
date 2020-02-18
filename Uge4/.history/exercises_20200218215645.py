@@ -13,7 +13,7 @@ years = {1992: 0, 1993: 0, 1994: 0, 1995: 0, 1996: 0, 1997: 0, 1998: 0, 1999: 0,
        2014: 0, 2015: 0}
 east = {}
 west = {}
-specificHoods = {2: 'Østerbro', 4: 'Vesterbro/Kgs.'}
+specificHoods = {2: 'Østerbro', 4: 'Vesterbro/Kgs.'} #, 4: 'Vesterbro/Kgs.'
 nordicCountryCodes = {5104: 'Finland', 5106: 'Island', 5110: 'Norge', 5120: 'Sverige'}
 
 def getPopPerHood(hood):
