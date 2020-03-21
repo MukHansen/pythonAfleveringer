@@ -13,3 +13,10 @@ Afleverings opgaverne udgør den nederste del af følgende side
  Færdig minus ekstra
  
   [Exercises](https://github.com/MukHansen/pythonAfleveringer/blob/master/Uge4/exercises.py)
+ 
+ #  [Uge5](https://github.com/MukHansen/pythonAfleveringer/tree/master/Uge5-pandas)
+ Næsten færdig
+ 
+ #  [Uge8](https://github.com/MukHansen/pythonAfleveringer/tree/master/Uge8/gutenberg)
+ Færdig, vi har lavet dine opgaver me nogle små ændringer
+ 
