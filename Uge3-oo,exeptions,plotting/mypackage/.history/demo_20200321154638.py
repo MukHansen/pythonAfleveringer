@@ -1,7 +1,6 @@
 from mypackage.classes.course import Course
 from mypackage.classes.data_sheet import DataSheet
 from mypackage.classes.student import Student
-from mypackage.NotFoundExeption import NotFoundException
 import sys
 import random
 import platform

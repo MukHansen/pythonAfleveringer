@@ -1,7 +1,6 @@
 from mypackage.classes.course import Course
 from mypackage.classes.data_sheet import DataSheet
 from mypackage.classes.student import Student
-from mypackage.NotFoundExeption import NotFoundException
 import sys
 import random
 import platform
@@ -10,6 +9,7 @@ import ast
 from operator import itemgetter
 from collections import OrderedDict
 import matplotlib.pyplot as plt
+import ./NotFoundException
 
 print('__file__:{}\n__name__:{}\n__package__:{}\n'.format(__file__,__name__,str(__package__)))
 lst_teachers = ["Elon Musk", "Steve Jobs", "Bill Gates"]
