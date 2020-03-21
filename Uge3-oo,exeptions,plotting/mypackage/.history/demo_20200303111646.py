@@ -6,9 +6,6 @@ import random
 import platform
 import csv
 import ast
-from operator import itemgetter
-from collections import OrderedDict
-import matplotlib.pyplot as plt
 
 print('__file__:{}\n__name__:{}\n__package__:{}\n'.format(__file__,__name__,str(__package__)))
 lst_teachers = ["Elon Musk", "Steve Jobs", "Bill Gates"]
@@ -49,7 +46,6 @@ def generate_students(n):
     write_list_to_file('students.csv', lst_students)
 
 def read_csv():
-    
     if platform.system() == 'Windows':
         newline=''
     else:
@@ -62,67 +58,29 @@ def read_csv():
 
         my_list = list(reader)
         #print(my_list)
-    lst = {}
+
     for student in my_list[1:]:
         currData = DataSheet(student[2])
         literal = ast.literal_eval(currData.courses)
-        grades = []
-        sum = 0
+
         for l in literal:
-            grades.append(l[4])
-            sum += l[4];
-
-        avg_grade = sum/len(grades)
-        lst[student[0]] = avg_grade
-        print("GRADES: ",grades)
-        print("AVG GRADE: ",avg_grade)
-
-   
-    
-    print("Students: \n",lst,"\n ")
-    srted = sorted(lst.items(), key = 
-             lambda kv:(kv[1], kv[0]))
-    print("Sorted by grade: ", srted )
-    x, y = zip(*srted)
-    plt.bar(x, y, width=0.5, align='center')   
-    plt.title("Avg_grades bar plot", fontsize=12)
-    plt.xlabel("Names", fontsize=10)
-    plt.ylabel("Avg_grade", fontsize=10)     
-    plt.show()
-
-
+            print("Literal: ",l)
         
     return my_list
 
 def print_students():
-    students = []
+    persons = []
 
     for student in read_csv()[1:]:
-        students.append({'name': student[0], 'gender' : student[1], 'courses' : student[2], 'img_url': student[3]})
-    return students
+        # lst_courses = []
+        # for course in student[2]:
+        #     print(course)
+            # lst_courses.append({'name' : course[0], 'classroom' : course[1], 'teacher' : course[2], 'ETCS' : int(course[3]), 'grade' : int(course[4])})
+        persons.append({'name': student[0], 'gender' : student[1], 'courses' : student[2], 'img_url': student[3]})
+    return persons
 
-def print_grades():
-    grades = []
-
-    for student in read_csv()[1:]:
-        for grade in student[2]:
-            grades.append({'grade': grade})
-
-    return grades
 
 if __name__ == "__main__":
     print("Hello in demo")
- 
-    generate_students(4)
-    
-#ved godt det ikke er opgaven men har lidt misted overblik
-#i opgaven så nu er der i det mindste et eks. på exceptions
-    for i in range(0,20):
-        try:
-            result = random.randint(0,10) / random.randint(0,10)
-        except ZeroDivisionError: 
-            print("Cannot divide by 0!")
-        else: 
-            print(result)
-   # print("----------",print_grades())
+    generate_students(2)
     print("Print_Students: ",print_students())

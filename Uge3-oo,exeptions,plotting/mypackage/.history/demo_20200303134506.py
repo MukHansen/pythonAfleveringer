@@ -8,7 +8,6 @@ import csv
 import ast
 from operator import itemgetter
 from collections import OrderedDict
-import matplotlib.pyplot as plt
 
 print('__file__:{}\n__name__:{}\n__package__:{}\n'.format(__file__,__name__,str(__package__)))
 lst_teachers = ["Elon Musk", "Steve Jobs", "Bill Gates"]
@@ -62,7 +61,7 @@ def read_csv():
 
         my_list = list(reader)
         #print(my_list)
-    lst = {}
+    lst = []
     for student in my_list[1:]:
         currData = DataSheet(student[2])
         literal = ast.literal_eval(currData.courses)
@@ -73,23 +72,15 @@ def read_csv():
             sum += l[4];
 
         avg_grade = sum/len(grades)
-        lst[student[0]] = avg_grade
+        lst.append({student[0]:avg_grade})
         print("GRADES: ",grades)
         print("AVG GRADE: ",avg_grade)
 
-   
+    lst.sort()
     
-    print("Students: \n",lst,"\n ")
-    srted = sorted(lst.items(), key = 
-             lambda kv:(kv[1], kv[0]))
-    print("Sorted by grade: ", srted )
-    x, y = zip(*srted)
-    plt.bar(x, y, width=0.5, align='center')   
-    plt.title("Avg_grades bar plot", fontsize=12)
-    plt.xlabel("Names", fontsize=10)
-    plt.ylabel("Avg_grade", fontsize=10)     
-    plt.show()
-
+    print("Students: \n",lst,"\n AAAAAAAA: \n",sorted_x)
+    
+            
 
         
     return my_list
@@ -112,17 +103,6 @@ def print_grades():
 
 if __name__ == "__main__":
     print("Hello in demo")
- 
     generate_students(4)
-    
-#ved godt det ikke er opgaven men har lidt misted overblik
-#i opgaven så nu er der i det mindste et eks. på exceptions
-    for i in range(0,20):
-        try:
-            result = random.randint(0,10) / random.randint(0,10)
-        except ZeroDivisionError: 
-            print("Cannot divide by 0!")
-        else: 
-            print(result)
    # print("----------",print_grades())
     print("Print_Students: ",print_students())

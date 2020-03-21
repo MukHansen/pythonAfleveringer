@@ -114,15 +114,11 @@ if __name__ == "__main__":
     print("Hello in demo")
  
     generate_students(4)
-    
-#ved godt det ikke er opgaven men har lidt misted overblik
-#i opgaven så nu er der i det mindste et eks. på exceptions
-    for i in range(0,20):
-        try:
-            result = random.randint(0,10) / random.randint(0,10)
-        except ZeroDivisionError: 
-            print("Cannot divide by 0!")
-        else: 
-            print(result)
+    try:
+        result = random.randint(0,10) / random.randint(0,10)
+    except ZeroDivisionError: 
+        print("Cannot divide by 0!")
+    else: 
+        print("NO EXCEPTION RESULT:",result)
    # print("----------",print_grades())
     print("Print_Students: ",print_students())

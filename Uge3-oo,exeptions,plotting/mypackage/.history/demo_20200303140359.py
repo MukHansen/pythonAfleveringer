@@ -83,14 +83,8 @@ def read_csv():
     srted = sorted(lst.items(), key = 
              lambda kv:(kv[1], kv[0]))
     print("Sorted by grade: ", srted )
-    x, y = zip(*srted)
-    plt.bar(x, y, width=0.5, align='center')   
-    plt.title("Avg_grades bar plot", fontsize=12)
-    plt.xlabel("Names", fontsize=10)
-    plt.ylabel("Avg_grade", fontsize=10)     
+    plt.bar(srted.keys, srted.values, width=0.5, align='center')        
     plt.show()
-
-
         
     return my_list
 
@@ -112,17 +106,6 @@ def print_grades():
 
 if __name__ == "__main__":
     print("Hello in demo")
- 
     generate_students(4)
-    
-#ved godt det ikke er opgaven men har lidt misted overblik
-#i opgaven så nu er der i det mindste et eks. på exceptions
-    for i in range(0,20):
-        try:
-            result = random.randint(0,10) / random.randint(0,10)
-        except ZeroDivisionError: 
-            print("Cannot divide by 0!")
-        else: 
-            print(result)
    # print("----------",print_grades())
     print("Print_Students: ",print_students())

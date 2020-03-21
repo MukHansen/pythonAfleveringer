@@ -114,9 +114,8 @@ if __name__ == "__main__":
     print("Hello in demo")
  
     generate_students(4)
-    
-#ved godt det ikke er opgaven men har lidt misted overblik
-#i opgaven så nu er der i det mindste et eks. på exceptions
+    import random
+
     for i in range(0,20):
         try:
             result = random.randint(0,10) / random.randint(0,10)
