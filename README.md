@@ -6,7 +6,7 @@ Afleverings opgaverne udgør den nederste del af følgende side
 
   [Utils.py](https://github.com/MukHansen/pythonAfleveringer/blob/master/Uge2/utils.py)
   
- #  [Uge3](https://github.com/MukHansen/pythonAfleveringer/tree/master/Uge3/mypackage)
+ #  [Uge3](https://github.com/MukHansen/pythonAfleveringer/tree/master/Uge3-oo%2Cexeptions%2Cplotting/mypackage)
   Mangler plotting for at være færdig
   
  #  [Uge4](https://github.com/MukHansen/pythonAfleveringer/blob/master/Uge4)
