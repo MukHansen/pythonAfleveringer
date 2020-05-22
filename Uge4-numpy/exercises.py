@@ -103,10 +103,10 @@ def displayPopulationOverTheYears():
     plt.show()
 
 # print(getSumPerHood())
-displayPlotOfHoodsPop()
+# displayPlotOfHoodsPop()
 # print('Number of people above the age of 65 --',getOldPeople())
 # print(getOldPeople())
 # print(getSumOfOldNordicPeople())
 # displayPopulationOverTheYears()
 # print(getSumPerSpecificHoods())
-# print(displayPopulationOverTheYears())
+print(displayPopulationOverTheYears())

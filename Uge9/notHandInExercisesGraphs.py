@@ -1,0 +1,24 @@
+# import numpy as np
+# import networkx as nx
+# # import webget
+
+# webget.download("https://snap.standford.edu/data/twitter_combined.txt.gz")
+
+# with gzip.open('twitter_combined.txt.gz', 'r') as f:
+#     g = nx.read_edgelist(f)
+
+# import gzip
+# import shutil
+
+# def whatever():
+#     with gzip.open('https://snap.stanford.edu/data/twitter_combined.txt.gz', 'rb') as f_in:
+#         with open('twitter_combined.txt.gz', 'wb') as f_out:
+#             shutil.copyfileobj(f_in, f_out)
+
+# print(whatever)
+
+import numpy as np
+
+nodes_list = np.array(builtins.list(g.nodes()))
+most_interesting = nodes_list[idx_most]
+print(f"most interesting node: {most_interesting}")
